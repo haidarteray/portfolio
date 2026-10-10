@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f2f0e8">
+	<meta name="description" content="Retrouvez le nouveau portfolio de Haidar Teray.">
+	<title>Nouveau portfolio | Haidar Teray</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--paper: #f2f0e8;
+			--ink: #17251f;
+			--muted: #65736b;
+			--line: #c8cec3;
+			--green: #b7f36b;
+			--blue: #315fe8;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			min-height: 100svh;
+			margin: 0;
+			padding: 28px;
+			display: grid;
+			place-items: center;
+			color: var(--ink);
+			background-color: var(--paper);
+			background-image: linear-gradient(#dfe2d8 1px, transparent 1px), linear-gradient(90deg, #dfe2d8 1px, transparent 1px);
+			background-size: 42px 42px;
+			font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		}
+
+		main {
+			width: min(100%, 980px);
+			height: calc(100svh - 56px);
+			padding: clamp(20px, 4vw, 48px);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background: var(--paper);
+			border: 1px solid var(--ink);
+			box-shadow: 12px 12px 0 var(--ink);
+			animation: arrive 650ms ease-out both;
+		}
+
+		.topline, .bottomline {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.signature { display: inline-flex; align-items: center; gap: 10px; }
+		.mark { width: 12px; height: 12px; background: var(--blue); border-radius: 50%; }
+		.edition { color: var(--muted); }
+
+		.content { max-width: 700px; padding: clamp(22px, 4vh, 42px) 0; }
+
+		.eyebrow {
+			margin: 0 0 16px;
+			color: var(--blue);
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		h1 {
+			max-width: 680px;
+			margin: 0;
+			font-family: Georgia, "Times New Roman", serif;
+			font-size: clamp(52px, 8vw, 92px);
+			font-weight: 400;
+			line-height: 0.98;
+		}
+
+		h1 span {
+			position: relative;
+			display: inline-block;
+			z-index: 0;
+			white-space: nowrap;
+		}
+
+		h1 span::after {
+			position: absolute;
+			right: -5px;
+			bottom: 4px;
+			left: -5px;
+			z-index: -1;
+			height: 34%;
+			background: var(--green);
+			content: "";
+			transform: rotate(-1.5deg);
+		}
+
+		.intro {
+			max-width: 450px;
+			margin: 22px 0 0;
+			color: var(--muted);
+			font-size: 17px;
+			line-height: 1.65;
+		}
+
+		.visit {
+			min-height: 58px;
+			margin-top: 24px;
+			padding: 0 21px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 30px;
+			color: #fff;
+			background: var(--blue);
+			border: 1px solid var(--ink);
+			box-shadow: 4px 4px 0 var(--ink);
+			font-size: 15px;
+			font-weight: 700;
+			text-decoration: none;
+			transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+		}
+
+		.visit:hover { background: #244ac0; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+		.visit:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+		.arrow { font-size: 22px; line-height: 1; }
+
+		.bottomline { padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); }
+		.bottomline a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+		@keyframes arrive {
+			from { opacity: 0; transform: translateY(12px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		@media (max-width: 560px) {
+			body { padding: 16px; }
+			main { height: calc(100svh - 32px); padding: 20px; box-shadow: 6px 6px 0 var(--ink); }
+			.topline, .bottomline { font-size: 10px; }
+			.content { padding: clamp(20px, 4vh, 32px) 0; }
+			h1 { font-size: clamp(44px, 12vw, 64px); }
+			.intro { font-size: 16px; }
+			.bottomline { align-items: flex-start; flex-direction: column; gap: 8px; }
+		}
+
+		@media (max-height: 700px) {
+			main { padding-top: 20px; padding-bottom: 20px; }
+			.content { padding-top: 14px; padding-bottom: 14px; }
+			.eyebrow { margin-bottom: 12px; }
+			h1 { font-size: clamp(46px, 7vw, 76px); }
+			.intro { margin-top: 16px; }
+			.visit { min-height: 52px; margin-top: 18px; }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header class="topline">
+			<span class="signature"><span class="mark" aria-hidden="true"></span>Haidar Teray</span>
+			<span class="edition">Portfolio</span>
+		</header>
+
+		<section class="content" aria-labelledby="title">
+			<p class="eyebrow">Une nouvelle adresse</p>
+			<h1 id="title">Mon nouveau<br><span>portfolio</span></h1>
+			<p class="intro">Tout est maintenant rassemblé ici.</p>
+			<a class="visit" href="https://haidarteray.vercel.app" target="_blank" rel="noopener noreferrer">
+				D&eacute;couvrir mon portfolio <span class="arrow" aria-hidden="true">&nearr;</span>
+			</a>
+		</section>
+
+		<footer class="bottomline">
+			<span>HT</span>
+			<a href="video.html" target="_blank" rel="noopener noreferrer" aria-label="Voir la vidéo dans un nouvel onglet">7</a>
+		</footer>
+	</main>
+</body>
+</html>
